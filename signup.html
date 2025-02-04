@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyper Writes - Signup</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('b1.jpg') no-repeat center center/cover;
+            background-size: cover;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            display: flex;
+            width: 60%;
+            background: rgba(165, 241, 166, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+            
+        }
+        .right {
+            flex: 1;
+            
+            color: rgb(5, 20, 10);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+        .right i {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        .left {
+            flex: 1;
+            padding: 40px;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid rgb(15, 86, 27);
+            border-radius: 50px;
+        }
+        .form-container button {
+            width: 80%;
+            padding: 12px;
+            background: rgb(20, 27, 20);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        h3
+        {
+            color: black;
+            font-weight: 600;
+            font-size: 30px;
+            
+            text-align: center;
+        }
+        .form-container a {
+            color: green;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h3>HELLO THERE, WELCOME!🤗</h3>
+            <div class="form-container">
+                
+                <h2>Sign Up for HyperWrites</h2>
+                <form action="register.php" method="POST">
+                    <input type="text" name="first_name" placeholder="First Name" required>
+<input type="text" name="last_name" placeholder="Last Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="text" name="username" placeholder="Username" required>
+<input type="password" name="password" placeholder="Password" required>
+
+                    
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="login.html">Login</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="right">
+            <i class="fas fa-pen-nib"></i>
+            <h2>"Start Your Writing Journey Today!"</h2>
+            <p>"Join a community of writers, thinkers, and creators."</p>
+        </div>
+    </div>
+</body>
+</html>

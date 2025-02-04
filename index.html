@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperWrites</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(b3.jpg) no-repeat center center fixed;
+            background-size: cover;
+            
+        }
+        h2
+        {
+            font-weight: bold;
+            text-align: center;
+        }
+        header {
+            background-color: #e3f4ec;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            border-radius: 50px;
+            top: 0;
+            height: auto;
+            width: 100%;
+            z-index: 100;
+        
+        }
+        header .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(27, 88, 27);
+            text-align: center;
+        }
+        header a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        header .apply-now {
+            background-color: transparent;
+            padding: 10px 20px;
+            margin-right: -30px;
+            border-radius: 40px;
+            font-weight: bold;
+        }
+        header .login {
+            background-color: #12812c;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: bold;
+        }
+        main {
+            margin-top: 60px;
+            padding: 10px;
+        }
+        section {
+            margin: 30px 0;
+        }
+        .stats, .register-requirements {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .stats div, .register-requirements div {
+            background-color: #cbf8f4;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .stats h3, .register-requirements h3 {
+            color: #28a745;
+        }
+        .benefits, .payment-methods, .testimonials {
+            background-color: #e0f3db;
+            padding: 30px;
+            border-radius: 40px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .testimonials {
+            background-color: #f5f5f5;
+            width: 80%;
+        }
+        .testimonial {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .testimonial img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 80px;
+            height: 80px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        footer {
+            background-color: transparent;
+            color: #050706;
+            text-align: center;
+            padding: 1px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">HyperWrites</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="how.html">How It Works</a>
+            <a href="about.html">About Us</a>
+            <a href="vacancy.html">Vacancies</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <a href="signup.html" class="apply-now">Apply Now</a>
+        <a href="login.html" class="login">Login</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to HyperWrites!!</h2>
+            <h4>Start your journey with us today and become part of an innovative and creative team. Explore great opportunities to grow and earn.</p>
+            <div class="stats">
+                <div>
+                    <h3>1792</h3>
+                    <p>Writers online</p>
+                </div>
+                <div>
+                    <h3>633</h3>
+                    <p>Available projects</p>
+                </div>
+                <div>
+                    <h3>380</h3>
+                    <p>Orders in progress</p>
+                </div>
+                <div>
+                    <h3>$328.20</h3>
+                    <p>Average salary</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Our Benefits</h2>
+            <ul>
+                <li>Free registration</li>
+                <li>14-day payment cycle</li>
+                <li>Ironclad Privacy Policy</li>
+                <li>Onboarding system</li>
+                <li>24/7 Support</li>
+                <li>Personal Account Managers</li>
+            </ul>
+        </section>
+
+        <section class="payment-methods">
+            <h2>How We Pay...</h2>
+            <p>Depending on the country of residence, we offer multiple payment methods to ensure smooth transactions for our content creators.</p>
+            <p>Literally, They include mpesa, paypal, payoneer and many other more.</p>
+        </section>
+
+        <section class="register-requirements">
+            <div>
+                <h3>Required to Register</h3>
+                <p>To become a part of our community, you'll need:</p>
+                <ul>
+                    <li>A valid email address</li>
+                    <li>A government-issued ID</li>
+                    <li>Proof of residence (optional depending on country)</li>
+                    <li>Your payment method details (Mpesa, Paypal, Payoneer)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Writers Say</h2>
+            <div class="testimonial">
+                <img src="w1.jpg" alt="Writer 1">
+                <div>
+                    <p>"HyperWrites has been an amazing place to grow as a freelancer. The support is always there, and payments are fast!"</p>
+                    <p><strong>Boris, Belgrade</strong></p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="w2.jpg" alt="Writer 1">
+                <div>
+                    <p>"I love the variety of projects available. There's always something to work on, and I get paid promptly."</p>
+                    <p><strong>Nick, London</strong></p>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WritersHub | Terms of Use | Privacy | Cookie Policy</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Page</title>
+    <style>
+        body {
+            background-image: url(b1.jpg);
+            background-size: cover;
+            background-color: #1f1f1f;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background-color: #b4f8c3;
+            padding: 20px;
+            border-radius: 40px;
+            width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #4caf50;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        label {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #otp-section {
+            display: none;
+        }
+
+        #otp-timer {
+            color: red;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        label{
+            color: black;
+        }
+        input{
+            color: rgb(10, 9, 9);
+            background-color: aliceblue;
+            width: 80%;
+        }
+        button{
+            color: black;
+            width: 60%;
+        }
+        option{
+            color: black;
+            background-color: aliceblue;
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Verification</h2>
+            <!-- Verification Form -->
+            <form id="verification-form" action="sendotp.php" method="POST">
+                <div>
+                    <label for="verification-type">Choose Verification Method</label>
+                    <select id="verification-type" name="verification_type" required>
+                        <option value="phone">Phone Number</option>
+                        <option value="email">Email Address</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="contact">Enter your Phone Number or Email</label>
+                    <input type="text" id="contact" name="contact" required>
+                </div>
+                <div>
+                    <button type="submit" id="send-otp-btn">Send OTP</button>
+                </div>
+            </form>
+
+            <div id="otp-section">
+                <h3>Enter OTP</h3>
+                <form action="verifyotp.php" method="POST">
+                    <input type="text" name="otp" placeholder="Enter OTP" required>
+                    <button type="submit">Verify OTP</button>
+                </form>
+                <div id="otp-timer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let timer;
+        let timeLeft = 5 * 60; // 5 minutes countdown (in seconds)
+
+        // When Send OTP button is clicked, display the OTP input section and start the countdown
+        document.getElementById('verification-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the form from submitting
+
+            // Show OTP input section
+            document.getElementById('otp-section').style.display = 'block';
+
+            // Start the countdown timer
+            startCountdown();
+        });
+
+        // Countdown timer function
+        function startCountdown() {
+            timer = setInterval(function() {
+                let minutes = Math.floor(timeLeft / 60);
+                let seconds = timeLeft % 60;
+
+                // Display the countdown in red
+                document.getElementById('otp-timer').textContent = `OTP expires in ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+                // Decrement time left
+                timeLeft--;
+
+                // If time runs out, clear the timer
+                if (timeLeft < 0) {
+                    clearInterval(timer);
+                    document.getElementById('otp-timer').textContent = 'OTP expired!';
+                    document.querySelector('button[type="submit"]').disabled = true;
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

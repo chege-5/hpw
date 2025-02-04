@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperWrites Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('b2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        header {
+            background-color: rgba(209, 211, 211, 0.7);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            border-radius: 50px;
+            z-index: 100;
+        }
+        header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: green;
+            margin-left: 50px;
+        }
+        header nav a {
+            margin: 0 15px;
+            color: rgb(8, 7, 7);
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 30px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+            color: #ed7d05;
+        }
+        .menu-btn {
+            display: none;
+        }
+        main {
+            margin-top: 80px;
+            padding: 20px;
+        }
+        .side-menu {
+            position: fixed;
+            top: 0;
+            color: #000;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #dcfeda;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 200;
+        }
+        .side-menu a {
+            padding: 15px 25px;
+            font-size: 18px;
+            color: rgb(5, 5, 5);
+            display: block;
+            width: 40%;
+            border: 2px solid #080808;
+            border-radius: 50px;
+            transition: 0.1s;
+        }
+        .side-menu a:hover {
+            background-color: #575757;
+            color: #00ffcc;
+        }
+        .side-menu-btn {
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            background-color: transparent;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 15px;
+            color: rgb(6, 6, 6);
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 999;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            font-size: 48px;
+            color: #00ffcc;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .card {
+            background-color: rgba(212, 242, 253, 0.705);
+            padding: 20px;
+            width: 40%;
+            display: block;
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .card h3 {
+            font-size: 26px;
+            color: #0e5613;
+        }
+        .card p {
+            font-size: 18px;
+            color: #050a08;
+        }
+        footer {
+            background-color: transparent;
+            color: #070707;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            border-radius: 50px;
+            width: 100%;
+        }
+        @media screen and (max-width: 768px) {
+            .side-menu {
+                width: 200px;
+            }
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="sideMenu" class="side-menu">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.php">Profile</a>
+        <a href="projects.html">Projects</a>
+        <a href="earnings.html">earnings</a>
+        <a href="settings.html">Settings</a>
+        <a href="messsages.html">Messages</a>
+        <a href="logout.html">Logout</a>
+    </div>
+
+    <header>
+        <div class="logo">HyperWrites</div>
+        <nav>
+            <a href="messages.html">updates tab</a>
+            <a href="verify.html">Verify</a>
+            <a href="projects.html">Projects</a>
+            <a href="#">Support</a>
+            <a href="accounts.html">Account</a>
+        </nav>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <button class="side-menu-btn" onclick="toggleMenu()">☰</button>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h1>Welcome to Your Dashboard!</h1>
+                <p>Explore the site, manage your account, and grow your writing career with ease. Here's everything you need in one place.</p>
+                <p>In simpler terms, you get to practise all of the things you ever thought of but instead of ending up like tht you earn something good.</p>
+            </div>
+        </section>
+
+        <section class="cards-container">
+            <div class="card">
+                <h3>Projects</h3>
+                <p>View and manage your ongoing and completed projects.</p>
+                <p>Apply for new projects and get hired by clients.</p>
+                <p>Stand a chance to bid more projects, the more you bid the more you increase your earning capabilities.</p>
+                <button>see more>></button>
+            </div>
+            <div class="card">
+                <h3>Payments</h3>
+                <p>Track and manage your earnings and payments.</p>
+                <p>Revisit your transactions and make new ones.</p>
+                <p>Get paid for your work and withdraw your earnings.</p>
+                <button>see more>></button>
+            </div>
+            <div class="card">
+                <h3>Messages</h3>
+                <p>Stay connected with your clients and colleagues.</p>
+                <p>get notified of new projects and new assignments on your profile.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HyperWrites | Terms of Use | Privacy Policy | Cookie Policy</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            if (sideMenu.style.left === '0px') {
+                sideMenu.style.left = '-250px';
+            } else {
+                sideMenu.style.left = '0px';
+            }
+        }
+    </script>
+
+</body>
+</html>
