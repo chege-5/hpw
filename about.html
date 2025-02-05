@@ -17,40 +17,66 @@
                   flex-direction: column;
                    align-items: center;
                  }
-        header 
-        { 
-            width: 100%;
-            
-             background-color: #e3f7d1;
-              padding: 20px;
-               color: white;
-                text-align: right;
-                 position: fixed;
-                  top: 0;
-                   left: 0;
-                    right: 0;
-                     z-index: 10;
-                     }
-        .logo { 
+
+                 
+                 header .logo {
             font-size: 30px;
-             font-weight: bold;
-              color: rgb(27, 88, 27);
-               text-align: left;
-             }
-        nav { 
+            font-weight: bold;
+            color: rgb(27, 88, 27);
+            text-align: left;
+            margin-left: 20px;
+            
+        }
+        header {
+            background-color: #e3f4ec;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color:#daf7da;
+            padding: 10px 20px;
+            color: #000;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            height: auto;
+            z-index: 100; 
+        }
+
+        .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+        header .login {
+            background-color: #12812c;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            
+        }
+
+        nav 
+        { 
             display: flex;
              justify-content: center;
               gap: 20px;
-             }
-        nav a { 
-            text-decoration: none;
-             color: rgb(7, 7, 7);
-              font-size: 16px;
-             }
-        nav a:hover { 
+               margin-top: 1px;
+                }
+        nav a 
+        {
+             text-decoration: none;
+              color: #000;
+               font-size: 16px;
+                font-weight: bold;
+                 padding: 10px;
+                  transition: color 0.3s;
+                   }
+        nav a:hover 
+        { 
             color: #00BFFF;
-             text-decoration: underline;
-             }
+         }
         .content 
         { margin-top: 100px;
              padding: 20px;
@@ -68,7 +94,9 @@
                padding: 20px;
                 background-color: transparent;
                  color: rgb(6, 6, 6);
-                  border-radius: 40px;
+                  border-radius: 20px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+                 margin-bottom: 45px;
                   border: 2px solid #00BFFF;
                    text-align: center;
                  }
@@ -76,14 +104,18 @@
         { background-color: #a9adae;
              color: #000;
               padding: 50px;
-              border-radius: 40px;
+              border-radius: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+             margin-bottom: 45px;
                text-align: center;
              }
         .hero-section2
         { background-color: #aad8eb;
              color: #000;
               padding: 50px;
-              border-radius: 40px;
+              border-radius: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+             margin-bottom: 45px;
                text-align: center;
              }
         footer { background-color: transparent;
@@ -104,17 +136,22 @@
 </head>
 <body>
 
-<header>
-    <div class="logo">HyperWrites</div>
-    <nav>
-        <a href="index.html">Home</a>
+    <header>
+        <div class="logo-container">
+            <img src="hpw_icon.png" alt="HyperWrites Logo" width="50px" height="50px">
+            <div class="logo">HyperWrites</div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
             <a href="how.html">How It Works</a>
             <a href="about.html">About Us</a>
             <a href="vacancy.html">Vacancies</a>
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact Us</a>
-    </nav>
-</header>
+        </nav>
+    
+        <a href="login.html" class="login">Login</a>
+    </header>
 
 <section class="content">
     <div class="hero">
@@ -133,7 +170,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2025 Hyperwrites. <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+    <p>&copy; 2025 HyperWrites. <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
 </footer>
 
 </body>

@@ -30,17 +30,37 @@
             margin-left: 20px;
             
         }
-        header 
-        { width: 100%;
-             background-color:#daf7da;
-              padding: 2px;
-                color: #000;
-                 text-align: center;
-                  position: fixed;
-                   top: 0;
-                    left: 0;
-                     right: 0;
-                      z-index: 10; }
+        header {
+            background-color: #e3f4ec;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color:#daf7da;
+            padding: 10px 20px;
+            color: #000;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            height: auto;
+            z-index: 100; 
+        }
+
+        .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+        header .login {
+            background-color: #12812c;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            
+        }
+
         nav 
         { 
             display: flex;
@@ -73,7 +93,8 @@
             background-color: transparent;
              color: #000;
               padding: 20px;
-               border-radius: 60px;
+               border-radius: 20px;
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
                border: 2px solid #b8b6b6;
                 text-align: center;
                  width: 100%;
@@ -88,7 +109,10 @@
             background-color: #ade4fc;
              color: rgb(4, 4, 4);
               padding: 50px;
-              border-radius: 50px;
+              border-radius: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+              margin-bottom: 40px;
+              margin-bottom: 10px;
                text-align: center;
                width: 70%;
              }
@@ -98,7 +122,9 @@
              color: rgb(4, 4, 4);
               padding: 50px;
               width: 90%;
-              border-radius: 50px;
+              border-radius: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+              margin-bottom: 40px;
                text-align: center;
              }
              .hero-section2
@@ -107,7 +133,9 @@
              color: rgb(4, 4, 4);
               padding: 50px;
               width: 100%;
-              border-radius: 50px;
+              border-radius: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+              margin-bottom: 40px;
                text-align: center;
              }
              .hero-section3
@@ -116,7 +144,9 @@
              color: rgb(4, 4, 4);
               padding: 50px;
               width: 90%;
-              border-radius: 50px;
+              border-radius: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+              margin-bottom: 40px;
                text-align: center;
              }
              .hero-section4
@@ -125,7 +155,9 @@
              color: rgb(4, 4, 4);
               padding: 50px;
               width: 70%;
-              border-radius: 50px;
+              border-radius: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+              margin-bottom: 40px;
                text-align: center;
              }
              .hero-section5
@@ -134,7 +166,9 @@
              color: rgb(4, 4, 4);
               padding: 50px;
               width: 50%;
-              border-radius: 50px;
+              border-radius: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+              margin-bottom: 40px;
                text-align: center;
              }
         footer 
@@ -157,22 +191,28 @@
         footer a:hover 
         { 
             color: #00BFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+            background-color: none;
          }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">HyperWrites</div>
+    <div class="logo-container">
+        <img src="hpw_icon.png" alt="HyperWrites Logo" width="50px" height="50px">
+        <div class="logo">HyperWrites</div>
+    </div>
     <nav>
         <a href="index.html">Home</a>
-        <a href="signup.html">Signup</a>
         <a href="how.html">How It Works</a>
         <a href="about.html">About Us</a>
         <a href="vacancy.html">Vacancies</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact Us</a>
     </nav>
+
+    <a href="login.html" class="login">Login</a>
 </header>
 
 <section class="content">
@@ -182,7 +222,7 @@
         <p>Here's a detailed explanation of how you can get started with Hyperwrites!</p>
     </div>
 
-    <h2>Overview</h2>
+    <strong><h2>Overview</h2></strong>
 
     <div class="hero-section1">
     <h2>Step 1: Register</h2>

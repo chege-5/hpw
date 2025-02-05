@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HyperWrites</title>
+    <link rel="shortcut icon" href="hpw_icon.png" type="image/x-icon">
     <style>
         body {
             margin: 0;
             padding: 0;
             background: url(b3.jpg) no-repeat center center fixed;
             background-size: cover;
-            
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            overflow-x: hidden;
         }
         h2
         {
@@ -18,19 +22,26 @@
             text-align: center;
         }
         header {
-            background-color: #e3f4ec;
+            background-color: #daf7da;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
             position: fixed;
-            border-radius: 50px;
             top: 0;
             height: auto;
             width: 100%;
             z-index: 100;
+            text-align: center;
+            color: #000;
         
         }
+
+            .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
         header .logo {
             font-size: 30px;
             font-weight: bold;
@@ -47,13 +58,13 @@
             background-color: transparent;
             padding: 10px 20px;
             margin-right: -30px;
-            border-radius: 40px;
+            border-radius: 20px;
             font-weight: bold;
         }
         header .login {
             background-color: #12812c;
             padding: 10px 20px;
-            border-radius: 40px;
+            border-radius: 20px;
             font-weight: bold;
         }
         main {
@@ -72,36 +83,93 @@
         .stats div, .register-requirements div {
             background-color: #cbf8f4;
             padding: 20px;
-            border-radius: 50px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+            box-shadow: 0 4px 8px rgba(0, -1, 0, 1);
+        }
+
+        .register-requirements div {
+            border-radius: 20px;
+        }
+        .stats div {
+            border-radius: 50%;
         }
         .stats h3, .register-requirements h3 {
             color: #28a745;
         }
-        .benefits, .payment-methods, .testimonials {
+        .benefits, .payment-methods  {
             background-color: #e0f3db;
             padding: 30px;
-            border-radius: 40px;
-            width: 80%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            justify-content: center;
+            
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
         }
         .testimonials {
-            background-color: #f5f5f5;
-            width: 80%;
+            max-width: 100%;
+            padding: 20px;
+            text-align: center;
         }
-        .testimonial {
-            display: flex;
+        .testimonials h2 {
             margin-bottom: 20px;
+        }
+
+        .testimonial-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 10px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            scrollbar-color: gray lightgray;
+        }
+
+        .testimonial-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .testimonial-container::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+
+        .testimonial-container::-webkit-scrollbar-thumb {
+            background: #008080;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .testimonial-container::-webkit-scrollbar-thumb:hover {
+            background: #004d4d;
+        }
+
+        .testimonial {
+             flex: 0 0 300px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+            text-align: center;
+            scroll-snap-align: start;
         }
         .testimonial img {
             border-radius: 50%;
-            margin-right: 20px;
+            margin-bottom: 10px;
+            object-fit: cover;
             width: 80px;
             height: 80px;
         }
         .testimonial p {
             font-style: italic;
+            font-size: 14px;
+            margin: 10px 0;
         }
+        .testimonial strong {
+            display: block;
+            margin-top: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+
         footer {
             background-color: transparent;
             color: #050706;
@@ -115,16 +183,18 @@
 </head>
 <body>
     <header>
-        <div class="logo">HyperWrites</div>
-        <div>
+        <div class="logo-container">
+            <img src="hpw_icon.png" alt="HyperWrites Logo" width="50px" height="50px">
+            <div class="logo">HyperWrites</div>
+        </div>
             <a href="index.html">Home</a>
             <a href="how.html">How It Works</a>
             <a href="about.html">About Us</a>
             <a href="vacancy.html">Vacancies</a>
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact Us</a>
-        </div>
-        <a href="signup.html" class="apply-now">Apply Now</a>
+        </nav>
+    
         <a href="login.html" class="login">Login</a>
     </header>
 
@@ -185,26 +255,33 @@
 
         <section class="testimonials">
             <h2>What Our Writers Say</h2>
-            <div class="testimonial">
-                <img src="w1.jpg" alt="Writer 1">
-                <div>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <img src="w1.jpg" alt="Writer 1">
                     <p>"HyperWrites has been an amazing place to grow as a freelancer. The support is always there, and payments are fast!"</p>
-                    <p><strong>Boris, Belgrade</strong></p>
+                    <strong>Boris, Belgrade</strong>
                 </div>
-            </div>
-            <div class="testimonial">
-                <img src="w2.jpg" alt="Writer 1">
-                <div>
+                <div class="testimonial">
+                    <img src="w2.jpg" alt="Writer 2">
                     <p>"I love the variety of projects available. There's always something to work on, and I get paid promptly."</p>
-                    <p><strong>Nick, London</strong></p>
+                    <strong>Nick, London</strong>
+                </div>
+                <div class="testimonial">
+                    <img src="w3.jpg" alt="Writer 3">
+                    <p>"The onboarding was smooth, and I love how transparent the payment system is. Highly recommended!"</p>
+                    <strong>Sophia, Toronto</strong>
+                </div>
+                <div class="testimonial">
+                    <img src="w4.jpeg" alt="Writer 4">
+                    <p>"Working with HyperWrites has allowed me to explore new topics and earn a consistent income."</p>
+                    <strong>Aiden, Sydney</strong>
                 </div>
             </div>
-            
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 WritersHub | Terms of Use | Privacy | Cookie Policy</p>
+        <p>&copy; 2025 HyperWrites. | Terms of Use | Privacy | Cookie Policy</p>
     </footer>
 </body>
 </html>
